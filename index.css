@@ -1,0 +1,10 @@
+.form-signin #inputNickname {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.form-signin {
+  max-width: 300px;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+#imageQuiz {
+  width: 300px;
+  margin-bottom: 10px
+}
+
+.form-game .form-group {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group #inputAge {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 150px;
+  text-align: center;
+}
+
+.form-game {
+  text-align: center;
+}
+
+#submit {
+  margin: auto;
+}
