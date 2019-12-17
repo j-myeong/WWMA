@@ -11,6 +11,8 @@ answer = [
     ('male', 20),
     ('female', 19),
     ('male', 19),
+    ('male', 19),
+    ('male', 19),
 ]
 
 @app.route('/')
@@ -41,7 +43,7 @@ def game():
 
         personData[nickname] += 1
 
-        if personData[nickname] > 2:
+        if personData[nickname] > 5:
             return redirect('/result/' + nickname)
 
         return redirect('/game?nickname=' + nickname)
@@ -67,4 +69,4 @@ def result_detail():
     response.headers['Content-Type'] = 'application/json'
     return response
 
-app.run(debug=True)
+app.run("0.0.0.0", 80)
