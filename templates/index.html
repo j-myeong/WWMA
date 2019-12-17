@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="default.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -17,10 +17,14 @@
   <script>
     function changeButton() {
       if (document.getElementById('inputNickname').value == '') {
+        $('#submit').removeClass('btn-primary');
+        $('#submit').addClass('btn-outline-primary');
         $('#submit').addClass('disabled');
         $('#submit').attr('disabled', true);
       } else {
         $('#submit').removeClass('disabled');
+        $('#submit').removeClass('btn-outline-primary');
+        $('#submit').addClass('btn-primary');
         $('#submit').attr('disabled', false);
       }
     }
@@ -28,10 +32,10 @@
 </head>
 
 <body>
-  <form action="./game.html" class="form-signin" method="get">
+  <form action="./game" class="form-signin" method="get">
     <h1>내 나이가 어때서?</h1>
     <div class="form-group">
-      <input type="text" class="form-control" id="inputNickname" placeholder="NICKNAME" onkeyup="changeButton();" maxlength="10"> <br />
+      <input type="text" class="form-control" id="inputNickname" name="nickname" placeholder="NICKNAME" onkeyup="changeButton();" maxlength="10"> <br />
       <input type="submit" id="submit" class="btn btn-outline-primary disabled" value="JOIN" disabled>
     </div>
   </form>
