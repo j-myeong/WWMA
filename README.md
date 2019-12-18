@@ -4,4 +4,4 @@
 20191598 박정명 <br>
 20191606 변준형 <br> <br>
 `app.py` 는 Python Flask 서버 파일입니다. <br>
-나머지 What'sWrongwithMyAge Python PyQt5 파일은 `WhatIsWrongWithMyAge` 폴더에 위치하고 있습니다.
+나머지 Python PyQt5 파일은 `WhatIsWrongWithMyAge` 폴더에 위치하고 있습니다.
